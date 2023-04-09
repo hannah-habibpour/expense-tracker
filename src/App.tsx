@@ -20,7 +20,7 @@ function App() {
   return (
     <div>
       <div className="mb-3">
-        <ExpenseForm />
+        <ExpenseForm onSubmit={newExpense => setExpenses([...expenses, {...newExpense, id: expenses.length + 1}])}/>
       </div>
       <div className="mb-3">
         <ExpenseFilter onSelectCategory={category => setSelectedCategory(category)} />
