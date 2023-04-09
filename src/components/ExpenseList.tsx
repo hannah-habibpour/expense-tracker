@@ -12,7 +12,9 @@ interface Props {
     onDelete: (id: number) => void
 }
 
-function ExpenseList( { expenses, onDelete }: Props ) {
+function ExpenseList({ expenses, onDelete }: Props) {
+    if (expenses.length === 0) return null
+    
   return (
       <table className="table table-bordered">
           <thead>
