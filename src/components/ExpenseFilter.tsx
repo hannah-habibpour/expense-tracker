@@ -1,6 +1,6 @@
 import React from 'react'
-import { categories } from '../App'
-import { optional } from 'zod'
+import categories from '../categories'
+
 
 interface Props {
     onSelectCategory: (category: string) => void
